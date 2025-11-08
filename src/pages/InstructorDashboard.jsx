@@ -577,16 +577,16 @@ export default function InstructorDashboard() {
             <div className="flex items-center justify-between mb-3">
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Total Earnings (70%)</p>
-                <p className="text-3xl font-bold">₹{stats.totalRevenue.toLocaleString()}</p>
+                <p className="text-3xl font-bold">₹{(stats.totalRevenue || 0).toLocaleString()}</p>
               </div>
               <DollarSign className="h-12 w-12 text-yellow-600 dark:text-yellow-400" />
             </div>
             <div className="flex items-center justify-between text-sm pt-3 border-t border-gray-200 dark:border-gray-700">
               <div>
-                <span className="text-green-600 dark:text-green-400">Paid: ₹{stats.paidEarnings.toLocaleString()}</span>
+                <span className="text-green-600 dark:text-green-400">Paid: ₹{(stats.paidEarnings || 0).toLocaleString()}</span>
               </div>
               <div>
-                <span className="text-orange-600 dark:text-orange-400">Pending: ₹{stats.pendingEarnings.toLocaleString()}</span>
+                <span className="text-orange-600 dark:text-orange-400">Pending: ₹{(stats.pendingEarnings || 0).toLocaleString()}</span>
               </div>
             </div>
           </motion.div>
